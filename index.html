@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6366f1">
+
+    <title>QR Code Generator</title>
+    <meta name="description" content="Generate QR codes instantly from text, links, and URLs.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="qr-card">
+        <div class="brand-icon" aria-hidden="true">⌗</div>
+
+        <h1>QR Code Generator</h1>
+        <p class="subtitle">Turn your text or link into a QR code.</p>
+
+        <form id="qrform">
+            <label for="qrtext">Enter text or URL</label>
+
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="qrtext"
+                    placeholder="https://example.com"
+                    autocomplete="url"
+                    maxlength="2000"
+                    required
+                >
+                <button type="submit" id="generateBtn">
+                    Generate
+                </button>
+            </div>
+        </form>
+
+        <section class="result" id="result" hidden aria-label="QR code result">
+            <div class="imgbox">
+                <img id="qrimg" alt="Generated QR code" width="200" height="200">
+            </div>
+
+            <p class="result-text">Your QR code is ready!</p>
+
+            <button type="button" id="downloadBtn" class="download-btn">
+                Download QR Code
+            </button>
+        </section>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+
+        <footer>
+            Made with HTML, CSS &amp; JavaScript
+        </footer>
+    </main>
+</body>
+</html>
